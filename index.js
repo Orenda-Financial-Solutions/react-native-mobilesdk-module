@@ -215,7 +215,7 @@ Builder.prototype.build = function () {
 }
 
 
-module.exports = {
+export default {
     init: function (accessToken, expirationHandler) {
         return new Builder().withAccessToken(accessToken, expirationHandler)
     },
