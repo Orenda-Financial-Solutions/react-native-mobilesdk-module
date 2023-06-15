@@ -1,0 +1,10 @@
+source 'https://cdn.cocoapods.org/'
+source 'https://github.com/SumSubstance/Specs.git'
+
+target 'MobilesdkModule' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'IdensicMobileSDK'
+
+end
