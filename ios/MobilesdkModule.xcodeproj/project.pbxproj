@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E6AD3A42E77FAC09EF15CE4 /* Pods_MobilesdkModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76337E2FCD1CBD25D1506665 /* Pods_MobilesdkModule.framework */; };
+		9AD64B478D2DBAF3C058BB4E /* libPods-MobilesdkModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 899059A60D3BD9665C8B451D /* libPods-MobilesdkModule.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +25,7 @@
 /* Begin PBXFileReference section */
 		01BB56A84C1CB5F16CB44DA8 /* Pods-MobilesdkModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilesdkModule.debug.xcconfig"; path = "Target Support Files/Pods-MobilesdkModule/Pods-MobilesdkModule.debug.xcconfig"; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libMobilesdkModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMobilesdkModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		76337E2FCD1CBD25D1506665 /* Pods_MobilesdkModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilesdkModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		899059A60D3BD9665C8B451D /* libPods-MobilesdkModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobilesdkModule.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D5B46A5B54318E89966F65D /* Pods-MobilesdkModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilesdkModule.release.xcconfig"; path = "Target Support Files/Pods-MobilesdkModule/Pods-MobilesdkModule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E6AD3A42E77FAC09EF15CE4 /* Pods_MobilesdkModule.framework in Frameworks */,
+				9AD64B478D2DBAF3C058BB4E /* libPods-MobilesdkModule.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +71,7 @@
 		B556DF4514590DA030B2EA57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				76337E2FCD1CBD25D1506665 /* Pods_MobilesdkModule.framework */,
+				899059A60D3BD9665C8B451D /* libPods-MobilesdkModule.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

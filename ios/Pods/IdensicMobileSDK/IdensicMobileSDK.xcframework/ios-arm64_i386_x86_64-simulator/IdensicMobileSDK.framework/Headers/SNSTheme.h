@@ -44,7 +44,7 @@ typedef NS_ENUM(NSInteger, SNSThemeDimmingEffect) {
 
 #pragma mark - General
 
-@property (nonatomic) UIStatusBarStyle sns_preferredStatusBarStyle SNS_THEME_DEPRECATED("Use `metrics.commonStatusBarStyle` instead.");
+@property (nonatomic) UIStatusBarStyle sns_preferredStatusBarStyle  SNS_THEME_DEPRECATED("Use `metrics.commonStatusBarStyle` instead.");
 /**
  * Matches to `colors.backgroundCommon` by default
  */
@@ -224,20 +224,6 @@ typedef NS_ENUM(NSInteger, SNSThemeDimmingEffect) {
  */
 @property (nonatomic) UIEdgeInsets sns_idDocStatusPaddings;
 
-/**
- * The horizontal spacing between icons and the texts on idDoc status cells at the Status Screen
- *
- * Default is 8pt
- */
-@property (nonatomic) CGFloat sns_idDocStatusIconSpacing;
-
-/**
- * The vertical spacing between the texts on idDoc status cells at the Status Screen
- *
- * Default is 2pt
- */
-@property (nonatomic) CGFloat sns_idDocStatusTextsSpacing;
-
 @property (nonatomic, nullable) UIFont *sns_idDocStatusPromptTextFont SNS_THEME_DEPRECATED("Unused");
 @property (nonatomic, nullable) UIColor *sns_idDocStatusPromptTextColor SNS_THEME_DEPRECATED("Unused");
 @property (nonatomic, nullable) UIColor *sns_idDocStatusPromptBackgroundColor SNS_THEME_DEPRECATED("Unused");
@@ -258,7 +244,7 @@ typedef NS_ENUM(NSInteger, SNSThemeDimmingEffect) {
  * Matches to `colors.backgroundWarning` by default
  */
 @property (nonatomic, nullable) UIColor *sns_idDocStatusSubmittedBackgroundColor;
-@property (nonatomic, nullable) UIImage *sns_idDocStatusSubmittedImage SNS_THEME_DEPRECATED("Use images.setIcon(:forVerificationStep:andState:)");
+@property (nonatomic, nullable) UIImage *sns_idDocStatusSubmittedImage SNS_THEME_DEPRECATED("Unused");
 
 /**
  * Matches to `fonts.subtitle1` by default
@@ -276,7 +262,7 @@ typedef NS_ENUM(NSInteger, SNSThemeDimmingEffect) {
  * Matches to `colors.backgroundNeutral` by default
  */
 @property (nonatomic, nullable) UIColor *sns_idDocStatusNotSubmittedBackgroundColor;
-@property (nonatomic, nullable) UIImage *sns_idDocStatusNotSubmittedImage SNS_THEME_DEPRECATED("Use images.setIcon(:forVerificationStep:andState:)");
+@property (nonatomic, nullable) UIImage *sns_idDocStatusNotSubmittedImage SNS_THEME_DEPRECATED("Unused");
 
 /**
  * Matches to `fonts.subtitle1` by default
@@ -294,7 +280,7 @@ typedef NS_ENUM(NSInteger, SNSThemeDimmingEffect) {
  * Matches to `colors.backgroundWarning` by default
  */
 @property (nonatomic, nullable) UIColor *sns_idDocStatusReviewingBackgroundColor;
-@property (nonatomic, nullable) UIImage *sns_idDocStatusReviewingImage SNS_THEME_DEPRECATED("Use images.setIcon(:forVerificationStep:andState:)");
+@property (nonatomic, nullable) UIImage *sns_idDocStatusReviewingImage SNS_THEME_DEPRECATED("Unused");
 
 /**
  * Matches to `fonts.subtitle1` by default
@@ -312,7 +298,7 @@ typedef NS_ENUM(NSInteger, SNSThemeDimmingEffect) {
  * Matches to `colors.backgroundCritical` by default
  */
 @property (nonatomic, nullable) UIColor *sns_idDocStatusDeclinedBackgroundColor;
-@property (nonatomic, nullable) UIImage *sns_idDocStatusDeclinedImage SNS_THEME_DEPRECATED("Use images.setIcon(:forVerificationStep:andState:)");
+@property (nonatomic, nullable) UIImage *sns_idDocStatusDeclinedImage SNS_THEME_DEPRECATED("Unused");
 
 /**
  * Matches to `fonts.subtitle1` by default
@@ -330,7 +316,7 @@ typedef NS_ENUM(NSInteger, SNSThemeDimmingEffect) {
  * Matches to `colors.backgroundSuccess` by default
  */
 @property (nonatomic, nullable) UIColor *sns_idDocStatusApprovedBackgroundColor;
-@property (nonatomic, nullable) UIImage *sns_idDocStatusApprovedImage SNS_THEME_DEPRECATED("Use images.setIcon(:forVerificationStep:andState:)");
+@property (nonatomic, nullable) UIImage *sns_idDocStatusApprovedImage SNS_THEME_DEPRECATED("Unused");
 
 @property (nonatomic) CGFloat sns_idDocBackgroundCornerRadius SNS_THEME_DEPRECATED("Use `metrics.cardCornerRadius` instead.");
 /**
@@ -390,16 +376,7 @@ typedef NS_ENUM(NSInteger, SNSThemeDimmingEffect) {
  * Matches to `colors.contentStrong` by default
  */
 @property (nonatomic, nullable) UIColor *sns_DocTypeScreenSectionTitleColor;
-@property (nonatomic) NSTextAlignment sns_DocTypeScreenSectionTitleAlignment SNS_THEME_DEPRECATED("Use `metrics.sectionHeaderAlignment` instead");
-
-/**
- * Matches to `fonts.headline2` by default
- */
-@property (nonatomic, nullable) UIFont *sns_DocTypeScreenSectionSubtitleFont;
-/**
- * Matches to `colors.contentStrong` by default
- */
-@property (nonatomic, nullable) UIColor *sns_DocTypeScreenSectionSubtitleColor;
+@property (nonatomic) NSTextAlignment sns_DocTypeScreenSectionTitleAlignment SNS_THEME_DEPRECATED("Use `metrics.listSectionTitleAlignment` instead");
 
 /**
  * Matches to `fonts.subtitle1` by default
@@ -423,83 +400,50 @@ typedef NS_ENUM(NSInteger, SNSThemeDimmingEffect) {
  */
 @property (nonatomic, nullable) UIImage *sns_DocTypeScreenItemDisclosureImage;
 
-/**
- * The paddings applied to the item cells at the DocType Selector Screen
- *
- * Default are: 12pt vertically and 12pt horizontally
- */
-@property (nonatomic) UIEdgeInsets sns_DocTypeScreenItemPaddings;
-
-/**
- * The mininum height of the item cells at the DocType Selector Screen
- *
- * Default is 0
- */
-@property (nonatomic) CGFloat sns_DocTypeScreenItemMinHeight;
-
-/**
- * The horizontal spacing between icons and the texts at the DocType Selector Screen
- *
- * Default is 8pt
- */
-@property (nonatomic) CGFloat sns_DocTypeScreenItemIconSpacing;
-
-/**
- * Use to force the vertically centering of the elements on the item cells at the DocType Selector Screen
- *
- * Default is false
- */
-@property (nonatomic) BOOL sns_DocTypeScreenItemVerticallyCentering;
-
-/**
- * Matches to `metrics.cardCornerRadius`
- */
-@property (nonatomic) CGFloat sns_DocTypeScreenItemCornerRadius;
-
 #pragma mark - Countries Screen
 
 /**
- * Matches to `colors.backgroundCommon`
+ * Matches to `colors.backgroundCommon` by default
  */
-@property (nonatomic, nullable) UIColor *sns_CountriesScreenBackgroundColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_CountriesScreenBackgroundColor;
 /**
- * Matches to `colors.listSeparator`
+ * Matches to `colors.listSeparator` by default
  */
-@property (nonatomic, nullable) UIColor *sns_CountriesScreenSeparatorColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_CountriesScreenSeparatorColor;
 
 /**
- * Matches to `fonts.subtitle2`
+ * Matches to `fonts.subtitle2` by default
  */
-@property (nonatomic, nullable) UIFont *sns_CountriesScreenItemTextFont SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIFont *sns_CountriesScreenItemTextFont;
 /**
- * Matches to `colors.contentNeutral`
+ * Matches to `colors.contentNeutral` by default
  */
-@property (nonatomic, nullable) UIColor *sns_CountriesScreenItemTextColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_CountriesScreenItemTextColor;
 /**
- * Matches to `colors.listSelectedItemBackground`
+ * Matches to `colors.listSelectedItemBackground` by default
  */
-@property (nonatomic, nullable) UIColor *sns_CountriesScreenSelectedItemBackgroundColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_CountriesScreenSelectedItemBackgroundColor;
 /**
- * Matches to `colors.contentNeutral`
+ * Matches to `colors.contentNeutral` by default
  */
-@property (nonatomic, nullable) UIColor *sns_CountriesScreenSelectedItemTextColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_CountriesScreenSelectedItemTextColor;
 
 /**
- * Matches to `fonts.subtitle2`
+ * Matches to `fonts.subtitle2` by default
  */
-@property (nonatomic, nullable) UIFont *sns_CountriesScreenSearchFieldFont SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIFont *sns_CountriesScreenSearchFieldFont;
 /**
- * Matches to `colors.fieldContent`
+ * Matches to `colors.fieldContent` by default
  */
-@property (nonatomic, nullable) UIColor *sns_CountriesScreenSearchFieldTextColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_CountriesScreenSearchFieldTextColor;
 /**
- * Matches to `colors.fieldBackground`
+ * Matches to `colors.fieldBackground` by default
  */
-@property (nonatomic, nullable) UIColor *sns_CountriesScreenSearchFieldBackgroundColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_CountriesScreenSearchFieldBackgroundColor;
 /**
- * Matches to `colors.fieldBorder`
+ * Matches to `colors.fieldBorder` by default
  */
-@property (nonatomic, nullable) UIColor *sns_CountriesScreenSearchFieldBorderColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_CountriesScreenSearchFieldBorderColor;
 
 #pragma mark - Camera Screen
 
@@ -560,19 +504,6 @@ typedef NS_ENUM(NSInteger, SNSThemeDimmingEffect) {
  * Matches to `colors.bottomSheetHandle` by default
  */
 @property (nonatomic, nullable) UIColor *sns_CameraScreenInfoHandlerInsideColor;
-
-/**
- * Default is `.center`
- */
-@property (nonatomic) NSTextAlignment sns_CameraScreenInfoTitleAlignment;
-/**
- * Default is `.center`
- */
-@property (nonatomic) NSTextAlignment sns_CameraScreenInfoBriefAlignment;
-/**
- * Default is `.natural`
- */
-@property (nonatomic) NSTextAlignment sns_CameraScreenInfoDetailsAlignment;
 
 @property (nonatomic, nullable) UIImage *sns_CameraScreenTorchOnImage SNS_THEME_DEPRECATED("Use `images.iconTorchOn` instead.");
 @property (nonatomic, nullable) UIImage *sns_CameraScreenTorchOffImage SNS_THEME_DEPRECATED("Use `images.iconTorchOff` instead.");
@@ -857,35 +788,35 @@ typedef NS_ENUM(NSInteger, SNSThemeDimmingEffect) {
 /**
  * Matches to `colors.backgroundCommon` by default
  */
-@property (nonatomic, nullable) UIColor *sns_DataScreenBackgroundColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_DataScreenBackgroundColor;
 /**
  * Matches to `colors.contentNeutral` by default
  */
-@property (nonatomic, nullable) UIColor *sns_DataScreenSpinnerColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_DataScreenSpinnerColor;
 /**
  * Matches to `colors.listSeparator` by default
  */
-@property (nonatomic, nullable) UIColor *sns_DataScreenSeparatorColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_DataScreenSeparatorColor;
 
 /**
  * Matches to `fonts.subtitle2` by default
  */
-@property (nonatomic, nullable) UIFont *sns_DataScreenNameFont SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIFont *sns_DataScreenNameFont;
 /**
  * Matches to `fonts.subtitle2` by default
  */
-@property (nonatomic, nullable) UIFont *sns_DataScreenValueFont SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIFont *sns_DataScreenValueFont;
 /**
  * Matches to `colors.contentStrong` by default
  */
-@property (nonatomic, nullable) UIColor *sns_DataScreenNameColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_DataScreenNameColor;
 /**
  * Matches to `colors.contentNeutral` by default
  */
-@property (nonatomic, nullable) UIColor *sns_DataScreenValueColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_DataScreenValueColor;
 /**
  * Matches to `colors.contentCritical` by default
  */
-@property (nonatomic, nullable) UIColor *sns_DataScreenErrorColor SNS_THEME_DEPRECATED("Unused");
+@property (nonatomic, nullable) UIColor *sns_DataScreenErrorColor;
 
 @end

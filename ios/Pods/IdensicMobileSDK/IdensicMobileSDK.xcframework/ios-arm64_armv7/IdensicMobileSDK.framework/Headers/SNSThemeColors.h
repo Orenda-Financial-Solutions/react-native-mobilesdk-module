@@ -134,17 +134,6 @@
 @property (nonatomic, nonnull) UIColor *secondaryButtonContentDisabled;
 
 
-#pragma mark - Card
-
-/// Used as a background color for the cards with `.plain` card style.
-/// Default is `nil`.
-@property (nonatomic, nullable) UIColor *cardPlainBackground;
-
-/// Used as a background color for the cards with `.bordered` card style.
-/// Default is `nil`.
-@property (nonatomic, nullable) UIColor *cardBorderedBackground;
-
-
 #pragma mark - Camera
 
 /// The Camera Screen background color.
@@ -156,29 +145,25 @@
 @property (nonatomic, nonnull) UIColor *cameraContent;
 
 
-#pragma mark - Field
+#pragma mark - Fields
 
-/// The background color of the input fields. Used for text fields.
+/// The background color of the input fields. Used for the search bar only at the moment.
 /// Default is #F6F7F9 and #FFFFFF with alpha 7% for the dark appearance.
 @property (nonatomic, nonnull) UIColor *fieldBackground;
 
-/// The background color of the input fields marked as invalid. Used for text fields.
-/// Default is equal to the `.backgroundCritical` color.
-@property (nonatomic, nonnull) UIColor *fieldBackgroundInvalid;
-
-/// The border color of the input fields. Used for text fields.
+/// The border color of the input fields. Used for the search bar only at the moment.
 /// Default is the clear color.
 @property (nonatomic, nonnull) UIColor *fieldBorder;
 
-/// The placeholder color of the input fields. Used for text fields.
+/// The placeholder color of the input fields. Used for the search bar only at the moment.
 /// Default is #94A0B8 and #FFFFFF with alpha 40% for the dark appearance.
 @property (nonatomic, nonnull) UIColor *fieldPlaceholder;
 
-/// The content color of the input fields. Used for text fields.
+/// The content color of the input fields. Used for the search bar only at the moment.
 /// Default is #333C4D and #FFFFFF with alpha 85% for the dark appearance.
 @property (nonatomic, nonnull) UIColor *fieldContent;
 
-/// The tint color of the input fields. Used for text fields, checkboxes and radio buttons.
+/// The tint color of the input fields. Used for the search bar only at the moment.
 /// Default is #1693E9 and #1485D1 for the dark appearance.
 @property (nonatomic, nonnull) UIColor *fieldTint;
 

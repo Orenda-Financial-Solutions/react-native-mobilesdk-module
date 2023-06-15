@@ -5,24 +5,6 @@
 
 #import "SNSThemeSection.h"
 
-typedef NS_ENUM(NSUInteger, SNSCloseBarItemStyle) {
-
-    /// Navigation bar item with 'sns_navigation_cancel' or 'sns_navigation_close' translations by context.
-    SNSCloseBarItemStyle_Text,
-    
-    /// Navigation bar item with 'closeIcon' image.
-    SNSCloseBarItemStyle_Icon,
-};
-
-typedef NS_ENUM(NSUInteger, SNSCloseBarItemAlignment) {
-
-    /// Placing the close bar item in the right side of the navigation bar.
-    SNSCloseBarItemAlignment_Right,
-    
-    /// Placing the close bar item in the left side of the navigation bar.
-    SNSCloseBarItemAlignment_Left,
-};
-
 typedef NS_ENUM(NSUInteger, SNSCardStyle) {
 
     /// With `.plain` style neither border nor background will be rendered.
@@ -46,14 +28,6 @@ typedef NS_ENUM(NSUInteger, SNSCardStyle) {
 /// The loading spinner style.
 /// Default is `.medium` for iOS 13+ and `.gray` for previous ones.
 @property (nonatomic) UIActivityIndicatorViewStyle activityIndicatorStyle;
-
-/// The preferred style of the close bar button. The options are `.icon` and `.text`.
-/// Default is `.icon`.
-@property (nonatomic) SNSCloseBarItemStyle preferredCloseBarItemStyle;
-
-/// The preferred alignment of the close bar button. The options are `.right` and `.left`.
-/// Default is `.right`.
-@property (nonatomic) SNSCloseBarItemAlignment preferredCloseBarItemAlignment;
 
 
 #pragma mark - Content
@@ -85,6 +59,9 @@ typedef NS_ENUM(NSUInteger, SNSCardStyle) {
 
 /// The status bar style on the Camera Screen.
 /// Default is `.default`.
+///
+/// @discussion
+/// Not used at the moment.
 @property (nonatomic) UIStatusBarStyle cameraStatusBarStyle;
 
 
@@ -130,10 +107,6 @@ typedef NS_ENUM(NSUInteger, SNSCardStyle) {
 /// Default is `.filled`.
 @property (nonatomic) SNSCardStyle verificationStepCardStyle;
 
-/// The style of a verification comment block that can be displayed when the applicant is temporarily declined.
-/// Default is `.bordered`.
-@property (nonatomic) SNSCardStyle verificationCommentCardStyle;
-
 /// The support items card style.
 /// Default is `.bordered`.
 @property (nonatomic) SNSCardStyle supportItemCardStyle;
@@ -154,20 +127,14 @@ typedef NS_ENUM(NSUInteger, SNSCardStyle) {
 /// Default is 1pt.
 ///
 /// @discussion
-/// Used for the cards with the `.bordered` card style only.
+/// Used for cards with the `.bordered` card style only.
 @property (nonatomic) CGFloat cardBorderWidth;
 
 
-#pragma mark - Alignment
+#pragma mark - List
 
-/// The alignment for the screen headers.
-/// Default is `.center`.
-@property (nonatomic) NSTextAlignment screenHeaderAlignment;
-
-/// The alignment for the section headers.
+/// The alignment for the list section titles.
 /// Default is `.natural`.
-@property (nonatomic) NSTextAlignment sectionHeaderAlignment;
-@property (nonatomic) NSTextAlignment listSectionTitleAlignment SNS_THEME_DEPRECATED("Use `metrics.sectionHeaderAlignment` instead.");
-
+@property (nonatomic) NSTextAlignment listSectionTitleAlignment;
 
 @end
